@@ -1,1 +1,0 @@
-Composition, inheritance, and delegation
