@@ -6,23 +6,23 @@ using namespace std;
 void main() 
 {
 	setlocale(LC_ALL, "rus");
-	char* name = "Àëåêñàíäð";
-	char* surname = "Åðøîâ";
-	char* lastname = "Èãîðåâè÷";
-	char* address = "Êèåâ, Óêðàèíà";
+	char* name = "Vasiliy";
+	char* surname = "Pupkin";
+	char* lastname = "Ivanovich";
+	char* address = "Kiev, Ukraine";
 	int medicalCardNumber = 19;
-	char* diagnosis = "Ïðîãðàììèðîâàíèå 1 ñòàäèè";
+	char* diagnosis = "Something strange";
 
 	Patient obj(name, surname, lastname, address, medicalCardNumber, diagnosis);
 
 	obj.display();
 	
-	char* new_name = "Òèìîôåé";
-	char* new_surname = "Àë¸øèí";
-	char* new_lastname = "Îëåãîâè÷";
-	char* new_address = "Ïðàãà, ×åõèÿ";
+	char* new_name = "Vasya";
+	char* new_surname = "Pupkinus";
+	char* new_lastname = "Petrovich";
+	char* new_address = "Lviv, Ukraine";
 	int new_medicalCardNumber = 27;
-	char* new_diagnosis = "Ïðîãðàììèðîâàíèå 2 ñòàäèè";
+	char* new_diagnosis = "Something more stranger";
 
 	obj.set_name(new_name);
 	obj.set_surname(new_surname);
