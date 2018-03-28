@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-/* Êîíñòðóêòîð èíèöèàëèçàöèè ñ ïàðàìåòðàìè âñåõ ïîëåé êëàññà Patient */
+/* Constructor with parameters Patient */
 
 Patient::Patient(char* cur_name, char* cur_surname, char* cur_lastname, char* cur_address, int cur_medicalCardNumber, char* cur_diagnosis) :
 	medicalCardNumber(cur_medicalCardNumber)
@@ -25,7 +25,7 @@ Patient::Patient(char* cur_name, char* cur_surname, char* cur_lastname, char* cu
 	strcpy(diagnosis, cur_diagnosis);
 };
 
-/* Ìåòîäû èíèöèàëèçàöèè ïîëåé êëàññà */
+/* setters */
 void Patient::set_name(char* cur_name)
 {
 	int len = strlen(cur_name);
@@ -86,7 +86,7 @@ void Patient::set_diagnosis(char* cur_diagnosis)
 	strcpy(diagnosis, cur_diagnosis);
 }
 
-/* Ìåòîäû âîçâðàùåíèÿ ïîëåé êëàññà Patient */
+/* getters */
 const char* Patient::get_name() const
 {
 	return name;
@@ -112,7 +112,7 @@ const char* Patient::get_diagnosis() const
 	return diagnosis;
 }
 
-/* Âûâîä èíôîðìàöèè ïðî îáúåêò */
+/* display method */
 void Patient::display()
 {
 	cout << "Èìÿ: " << name << endl;
@@ -123,7 +123,7 @@ void Patient::display()
 	cout << "Äèàãíîç: " << diagnosis << endl;
 }
 
-/* Äåñòðóêòîð êëàññà Patient */
+/* destructor */
 
 Patient::~Patient()
 {
