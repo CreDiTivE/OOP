@@ -6,23 +6,23 @@ using namespace std;
 void main() 
 {
 	setlocale(LC_ALL, "rus");
-	char* name = "Александр";
-	char* surname = "Ершов";
-	char* lastname = "Игоревич";
-	char* address = "Киев, Украина";
+	char* name = "ГЂГ«ГҐГЄГ±Г Г­Г¤Г°";
+	char* surname = "Г…Г°ГёГ®Гў";
+	char* lastname = "Г€ГЈГ®Г°ГҐГўГЁГ·";
+	char* address = "ГЉГЁГҐГў, Г“ГЄГ°Г ГЁГ­Г ";
 	int medicalCardNumber = 19;
-	char* diagnosis = "Программирование 1 стадии";
+	char* diagnosis = "ГЏГ°Г®ГЈГ°Г Г¬Г¬ГЁГ°Г®ГўГ Г­ГЁГҐ 1 Г±ГІГ Г¤ГЁГЁ";
 
 	Patient obj(name, surname, lastname, address, medicalCardNumber, diagnosis);
 
 	obj.display();
 	
-	char* new_name = "Тимофей";
-	char* new_surname = "Алёшин";
-	char* new_lastname = "Олегович";
-	char* new_address = "Прага, Чехия";
+	char* new_name = "Г’ГЁГ¬Г®ГґГҐГ©";
+	char* new_surname = "ГЂГ«ВёГёГЁГ­";
+	char* new_lastname = "ГЋГ«ГҐГЈГ®ГўГЁГ·";
+	char* new_address = "ГЏГ°Г ГЈГ , Г—ГҐГµГЁГї";
 	int new_medicalCardNumber = 27;
-	char* new_diagnosis = "Программирование 2 стадии";
+	char* new_diagnosis = "ГЏГ°Г®ГЈГ°Г Г¬Г¬ГЁГ°Г®ГўГ Г­ГЁГҐ 2 Г±ГІГ Г¤ГЁГЁ";
 
 	obj.set_name(new_name);
 	obj.set_surname(new_surname);
