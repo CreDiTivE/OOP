@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-/* Конструктор инициализации с параметрами всех полей класса Patient */
+/* ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ Г± ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬ГЁ ГўГ±ГҐГµ ГЇГ®Г«ГҐГ© ГЄГ«Г Г±Г±Г  Patient */
 
 Patient::Patient(char* cur_name, char* cur_surname, char* cur_lastname, char* cur_address, int cur_medicalCardNumber, char* cur_diagnosis) :
 	medicalCardNumber(cur_medicalCardNumber)
@@ -25,7 +25,7 @@ Patient::Patient(char* cur_name, char* cur_surname, char* cur_lastname, char* cu
 	strcpy(diagnosis, cur_diagnosis);
 };
 
-/* Методы инициализации полей класса */
+/* ГЊГҐГІГ®Г¤Г» ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ ГЇГ®Г«ГҐГ© ГЄГ«Г Г±Г±Г  */
 void Patient::set_name(char* cur_name)
 {
 	int len = strlen(cur_name);
@@ -86,7 +86,7 @@ void Patient::set_diagnosis(char* cur_diagnosis)
 	strcpy(diagnosis, cur_diagnosis);
 }
 
-/* Методы возвращения полей класса Patient */
+/* ГЊГҐГІГ®Г¤Г» ГўГ®Г§ГўГ°Г Г№ГҐГ­ГЁГї ГЇГ®Г«ГҐГ© ГЄГ«Г Г±Г±Г  Patient */
 const char* Patient::get_name() const
 {
 	return name;
@@ -112,18 +112,18 @@ const char* Patient::get_diagnosis() const
 	return diagnosis;
 }
 
-/* Вывод информации про объект */
+/* Г‚Г»ГўГ®Г¤ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГЁ ГЇГ°Г® Г®ГЎГєГҐГЄГІ */
 void Patient::display()
 {
-	cout << "Имя: " << name << endl;
-	cout << "Фамилия: " << surname << endl;
-	cout << "Отчество: " << lastname << endl;
-	cout << "Адрес: " << address << endl;
-	cout << "Номер мед. карты: " << medicalCardNumber << endl;
-	cout << "Диагноз: " << diagnosis << endl;
+	cout << "Г€Г¬Гї: " << name << endl;
+	cout << "Г”Г Г¬ГЁГ«ГЁГї: " << surname << endl;
+	cout << "ГЋГІГ·ГҐГ±ГІГўГ®: " << lastname << endl;
+	cout << "ГЂГ¤Г°ГҐГ±: " << address << endl;
+	cout << "ГЌГ®Г¬ГҐГ° Г¬ГҐГ¤. ГЄГ Г°ГІГ»: " << medicalCardNumber << endl;
+	cout << "Г„ГЁГ ГЈГ­Г®Г§: " << diagnosis << endl;
 }
 
-/* Деструктор класса Patient */
+/* Г„ГҐГ±ГІГ°ГіГЄГІГ®Г° ГЄГ«Г Г±Г±Г  Patient */
 
 Patient::~Patient()
 {
