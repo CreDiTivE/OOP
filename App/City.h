@@ -1,40 +1,40 @@
-/* ГЂГўГІГ®Г°: Г…Г°ГёГ®Гў ГЂ.Г€.
-* Г”Г Г©Г« Г§Г ГЈГ®Г«Г®ГўГ®ГЄ ГЄГ«Г Г±Г±Г -ГЇГ®ГІГ®Г¬ГЄГ  "ГѓГ®Г°Г®Г¤" */
+/* Автор: Ершов А.И.
+* Файл заголовок класса-потомка "Город" */
 
 #pragma once
 #include "Place.h"
 
 struct travel
 {
-	int numOfAirports;     // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г ГЅГ°Г®ГЇГ®Г°ГІГ®Гў
-	int numOfPorts;		   // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®Г°ГІГ®Гў
-	int numOfBusStations;  // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г ГўГІГ®ГЎГіГ±Г­Г»Гµ Г±ГІГ Г­Г¶ГЁГ©
-	int numOfRailstations; // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¦ГҐГ«ГҐГ§Г­Г®Г¤Г®Г°Г®Г¦Г­Г»Гµ ГўГ®ГЄГ§Г Г«Г®Гў
+	int numOfAirports;     // количество аэропортов
+	int numOfPorts;		   // количество портов
+	int numOfBusStations;  // количество автобусных станций
+	int numOfRailstations; // количество железнодорожных вокзалов
 };
 
 class City:public Place
 {
 private:
-	travel transport; // ГІГ°Г Г­Г±ГЇГ®Г°ГІ
-	string mayor;     // Г¬ГЅГ° ГЈГ®Г°Г®Г¤Г 
+	travel transport; // транспорт
+	string mayor;     // мэр города
 
 public:
-	City();  // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·ГҐГ­ГЁГѕ
-	City(string _name, double _square, int _population, travel _transport, string _mayor); // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г± ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬ГЁ
-	~City(); // Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
+	City();  // конструктор по умолчению
+	City(string _name, double _square, int _population, travel _transport, string _mayor); // конструктор с параметрами
+	~City(); // деструктор
 
-	void  set_transport(travel _transport);	 // Г±ГҐГІГІГҐГ° Г±ГІГ°ГіГЄГІГіГ°Г» "ГІГ°Г Г­Г±ГЇГ®Г°ГІ"
-	const travel get_transport() const;      // ГЈГҐГІГІГҐГ° Г±ГІГ°ГіГЄГІГіГ°Г» ГІГ°Г Г­Г±ГЇГ®Г°ГІ
-	void  set_mayor(string _mayor);			 // Г±ГҐГІГІГҐГ° ГЇГ®Г«Гї "Г¬ГЅГ°"
-	const string get_mayor() const;		     // ГЈГҐГІГІГҐГ° ГЇГ®Г«Гї "Г¬ГЅГ°"
+	void  set_transport(travel _transport);	 // сеттер структуры "транспорт"
+	const travel get_transport() const;      // геттер структуры транспорт
+	void  set_mayor(string _mayor);			 // сеттер поля "мэр"
+	const string get_mayor() const;		     // геттер поля "мэр"
 
-	ostream& display(ostream& os);			 // ГўГ»ГўГ®Г¤ Гў ГЇГ®ГІГ®ГЄ
-	istream& input(istream& is);			 // ГўГўГ®Г¤ Гў ГЇГ®ГІГ®ГЄ
-	ofstream& save_to_file(ofstream& of);	 // Г±Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Гў ГґГ Г©Г«
-	ifstream& load_from_file(ifstream & in); // Г§Г ГЈГ°ГіГ§ГЄГ  ГЁГ§ ГґГ Г©Г«Г 
+	ostream& display(ostream& os);			 // вывод в поток
+	istream& input(istream& is);			 // ввод в поток
+	ofstream& save_to_file(ofstream& of);	 // сохранение в файл
+	ifstream& load_from_file(ifstream & in); // загрузка из файла
 
-	friend ostream& operator << (ostream& os, City& city);	 // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГўГ»ГўГ®Г¤Г  ГЁГ§ ГЇГ®ГІГ®ГЄГ  Г­Г  ГЅГЄГ°Г Г­
-	friend istream& operator >> (istream& is, City& city);	 // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГўГўГ®Г¤Г  Гў ГЇГ®ГІГ®ГЄ
-	friend ofstream& operator << (ofstream& of, City& city); // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГўГ»ГўГ®Г¤Г  ГЁГ§ ГЇГ®ГІГ®ГЄГ  Гў ГґГ Г©Г«
-	friend ifstream& operator >> (ifstream& in, City& city); // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГўГўГ®Г¤Г  Гў ГЇГ®ГІГ®ГЄ ГЁГ§ ГґГ Г©Г«Г 
+	friend ostream& operator << (ostream& os, City& city);	 // перегрузка оператора вывода из потока на экран
+	friend istream& operator >> (istream& is, City& city);	 // перегрузка оператора ввода в поток
+	friend ofstream& operator << (ofstream& of, City& city); // перегрузка оператора вывода из потока в файл
+	friend ifstream& operator >> (ifstream& in, City& city); // перегрузка оператора ввода в поток из файла
 };
