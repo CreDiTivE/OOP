@@ -1,0 +1,107 @@
+10
+IndustrialEnterprise
+Donetsk Shahta
+13.03.1994
+Ukraine
+Mikhailovskaya 12
+1448
+gornovidobuvna
+MIDDLE
+
+InsuranceCompany
+MyLife
+14.07.2018
+USA
+Kennedie street 7
+10000
+2
+50000
+4
+USA
+Canada
+France
+Brazil
+
+IndustrialEnterprise
+X-com
+15.12.1999
+New Zeland
+Central square 1
+4000
+Gazoline
+SMALL
+
+InsuranceCompany
+UkrStrah
+14.03.2011
+Ukraine
+Soboleva 11
+16
+778
+14000
+2
+Ukraine
+Russia
+
+IndustrialEnterprise
+YuzhMash
+08.08.1958
+Ukraine
+Dnepr, gagarina 4
+10004
+Aeroengeneering
+LARGE
+
+IndustrialEnterprise
+BelarusStal
+12.06.1907
+Belarus
+Snizhinskaya 13
+2600
+Metalopererabotka
+MIDDLE
+
+InsuranceCompany
+Kasko
+24.01.2001
+Ukraine
+Khreschatik 1
+50000
+3
+800000
+3
+Ukraine
+Russia
+Moldova
+
+InsuranceCompany
+TvoyaStrahovka
+15.12.2015
+Russia
+Moskow
+7
+999
+1500
+1
+Russia
+
+InsuranceCompany
+Krona
+12.07.1999
+Ukraine
+Pchilki 23
+15
+736
+15000
+1
+Ukraine
+
+IndustrialEnterprise
+MotorSich
+15.03.1969
+Ukraine
+Dnepr
+6000
+Engines, airplanes
+LARGE
+
