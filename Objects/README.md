@@ -1,0 +1,1 @@
+Objects, work with pointers.
